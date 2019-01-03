@@ -27,7 +27,7 @@ def is_valid(filters, doc):
 
 
 @command.command('ls')
-@click.argument('repository', help='Repository to use')
+@click.argument('repository')
 @click.option('--filter', help='Apply filter on result list', multiple=True)
 @click.pass_context
 def ls(ctx, repository, filter):
