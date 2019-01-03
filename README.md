@@ -75,6 +75,27 @@ nexy repository ls
 nexy component ls example
 ```
 
+## List all tasks
+* You can run the command below to list all tasks
+
+```bash
+nexy task ls
+```
+
+## Start a task
+* You can run the command below to start the task `id`
+
+```bash
+nexy task start <id>
+```
+
+## Stop a task
+* You can run the command below to stop the task `id`
+
+```bash
+nexy task stop <id>
+```
+
 # Contributing
 If you find this image useful here's how you can help :
 
