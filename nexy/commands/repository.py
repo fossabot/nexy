@@ -1,12 +1,14 @@
 import click
 import urllib3
 
+from nexy.utils.const import SERVICE
+
 
 @click.command('repository')
 @click.pass_context
 def command(ctx):
     """List repositories"""
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
 
     click.secho("⇒ Fetching all repositories", fg='yellow')
     try:

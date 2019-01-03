@@ -1,9 +1,10 @@
 import click
 
-from nexy.commands import repository
 from nexy.commands import component
+from nexy.commands import repository
 from nexy.commands import task
 from nexy.services.nexus import NexusService
+from nexy.utils.const import SERVICE
 
 
 @click.group()
@@ -14,7 +15,7 @@ from nexy.services.nexus import NexusService
 def main(ctx, url, username, password):
     """Sonatype Nexus CLI"""
     ctx.ensure_object(dict)
-    ctx.obj['SERVICE'] = NexusService(url, username, password)
+    ctx.obj[SERVICE] = NexusService(url, username, password)
 
 
 # Register all commands

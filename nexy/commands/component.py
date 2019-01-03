@@ -3,6 +3,8 @@ import re
 import click
 import urllib3
 
+from nexy.utils.const import SERVICE
+
 
 @click.group('component')
 @click.pass_context
@@ -32,7 +34,7 @@ def is_valid(filters, doc):
 @click.pass_context
 def ls(ctx, repository, filter):
     """List components in repository"""
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
 
     click.secho("⇒ Fetching all components in repository", fg='yellow')
     try:
@@ -58,7 +60,7 @@ def rm(ctx, repository, id, filter):
     if (id is not None and filter is not None) or (id is None and filter is None):
         raise click.UsageError("Use either id or filter option")
 
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
     try:
         if id is not None:
             click.secho("⇒ Deleting component", fg='yellow')

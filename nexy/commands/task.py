@@ -1,6 +1,8 @@
 import click
 import urllib3
 
+from nexy.utils.const import SERVICE
+
 
 @click.group('task')
 @click.pass_context
@@ -13,7 +15,7 @@ def command(ctx):
 @click.pass_context
 def ls(ctx):
     """List tasks"""
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
 
     click.secho("⇒ Fetching all tasks", fg='yellow')
     try:
@@ -39,7 +41,7 @@ def ls(ctx):
 @click.pass_context
 def start(ctx, id):
     """Start a task"""
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
     try:
         # Attempt to fetch all components
         click.secho("⇒ Starting task", fg='yellow')
@@ -54,7 +56,7 @@ def start(ctx, id):
 @click.pass_context
 def stop(ctx, id):
     """Stop a task"""
-    nexus_service = ctx.obj['SERVICE']
+    nexus_service = ctx.obj[SERVICE]
     try:
         # Attempt to fetch all components
         click.secho("⇒ Stopping task", fg='yellow')
