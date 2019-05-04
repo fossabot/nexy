@@ -1,4 +1,6 @@
 # Nexy
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Famannocci%2Fnexy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Famannocci%2Fnexy?ref=badge_shield)
+
 Nexy is a tool design to manage Nexus from command line.
 
 # Prerequisites
@@ -101,3 +103,7 @@ If you find this image useful here's how you can help :
 
 * Send a Pull Request with your awesome new features and bug fixed
 * Be a part of the community and help resolve [Issues](https://github.com/amannocci/nexy/issues)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Famannocci%2Fnexy.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Famannocci%2Fnexy?ref=badge_large)
